@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Rating</title>
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.5.0/dist/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="star-rating.min.css">
+</head>
+<body>
+
+  <h3>Basic</h3>
+  <input type="text" id="example-rating" value="4.5" onchange="alert(this.value)">
+
+  <br><br>
+
+  <h3>Readonly</h3>
+  <input type="text" id="example-rating-readonly" value="3.5" readonly>
+
+  <br><br>
+
+  <h3>Custom size</h3>
+  <input type="text" id="example-rating-size2" value="4" data-star-rating-size="16" onchange="alert(this.value)">
+  <br>
+  <input type="text" id="example-rating-size1" value="2.5" data-star-rating-size="48" onchange="alert(this.value)">
+
+  <script src="star-rating.min.js"></script>
+  <script>
+    starRating(document.getElementById('example-rating'))
+    starRating(document.getElementById('example-rating-readonly'))
+    starRating(document.getElementById('example-rating-size1'))
+    starRating(document.getElementById('example-rating-size2'))
+  </script>
+</body>
+</html>
