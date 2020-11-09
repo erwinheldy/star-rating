@@ -8,7 +8,7 @@ const starRating = (element, config = {}) => {
   const stars = 5
   element.setAttribute('hidden', true)
   element.value = element.value > stars ? stars : element.value
-  const size = config.size || element.dataset.starRatingSize || 1.5
+  const size = element.dataset.starRatingSize || config.size || 1.5
   const width = size * stars
   const initValue = (100 / stars) * element.value
   element.insertAdjacentHTML('beforebegin', `<div class="star-rating"><div class="star-rating-value" style="width: ${initValue}%" data-star-rating-width="${initValue}%"></div></div>`)
